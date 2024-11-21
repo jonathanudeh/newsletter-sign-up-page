@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--White);
+}
+
+form {
+    max-width: 375px;
+    margin: auto auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    .mobile-hero {
+        max-inline-size: 100%;
+    }
+
+    .form-body {
+        padding: 20px;
+
+        .stay-updated {
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        .paragraph {
+            margin-bottom: 15px;
+        }
+
+        .list-div {
+            display: flex;
+            flex-direction: row;
+
+            .list {
+                
+                margin-right: 15px;
+                margin-top: -30px;
+            }
+
+            .list-text {
+                margin-bottom: 25px;
+            }
+        }
+
+        .list-div:nth-child(5) {
+            margin-bottom: 10px;
+        }
+
+        .email {
+            display: block;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            .error-msg {
+                color: var(--Tomato);
+                font-size: 1rem;
+            }
+        }
+
+        .email-input {
+            width: 100%;
+            padding: 20px;
+            border: .5px solid var(--Grey);
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .email-input:active {
+            border: .5px solid var(--Dark-Slate-Grey);
+        }
+
+        .error-display {
+            border: var(--Tomato) 1px solid;
+            color: var(--Tomato);
+            background-color: rgb(240, 195, 195);
+        }
+
+        .submit {
+            width: 100%;
+            height: 50px;
+            background-color: var(--Dark-Slate-Grey);
+            color: var(--White);
+            border: 0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .submit:active {
+            background-color: var(--Tomato);
+        }
+    }
+
+}
+
+.success-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 40px;
+
+    .success-image {
+        align-self: start;
+        margin-bottom: 40px;
+        margin-top: auto;
+    }
+
+    .thanks {
+        margin-bottom: 20px;
+        align-self: start;
+    }
+
+    .dismiss {
+        width: 100%;
+        height: 50px;
+        background-color: #1b1b32;
+        color: #ffff;
+        font-size: 1rem;
+        margin-top: auto;
+        border: 0;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+
+
+@media (min-width: 800px) {
+    body {
+        display: grid;
+        place-content: center;
+    }
+
+    main {
+        width: 100vw;
+        height: 100vh;
+        place-content: center;
+        background-color: #1b1b32;
+    }
+
+    form {
+        width: 800px;
+        max-width: 1440px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+        background-color: white;
+        height: 593px;
+        border-radius: 20px;
+        padding: 20px;
+
+        .form-body {
+            /*for some reason this style wont apply unless nested inside form-body, that's the reason for nesting here*/
+            .stay-updated {
+                font-size: 3rem;
+            }
+        }
+        .desktop-hero {
+            grid-column: 2;
+            grid-row: 1;
+         
+            height: 50%;
+            width: 30%;
+        }
+
+        
+
+        .form-body {
+            grid-column: 1;
+            grid-row: 1;
+            place-content: center;
+            
+        }
+    }
+
+    .success-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 40px;
+        width: 400px;
+        height: 400px;
+        background-color: #ffff;
+        margin: auto;
+        border-radius: 10px;
+    
+        .success-image {
+            align-self: start;
+            margin-bottom: 40px;
+            margin-top: auto;
+        }
+    
+        .thanks {
+            margin-bottom: 20px;
+            align-self: start;
+        }
+
+        .success-message {
+            margin-bottom: 20px;
+        }
+    
+        .dismiss {
+            width: 100%;
+            height: 50px;
+            background-color: #1b1b32;
+            color: #ffff;
+            font-size: 1rem;
+            border: 0;
+            border-radius: 10px;
+        }
+
+    }
+    
+}
+
+.disable {
+    display: none;
+}

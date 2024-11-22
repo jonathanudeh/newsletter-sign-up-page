@@ -13,7 +13,7 @@
   <!-- Sign-up form start -->
 
   <main>
-    <form action="#" novalidate>
+    <form action="/api/submit" novalidate>
       <picture>
         <source media="(min-width: 800px)" srcset="./assets/images/illustration-sign-up-desktop.svg" class="desktop-hero">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="an illustration sign up mobile" class="mobile-hero">
@@ -34,8 +34,8 @@
           <img src="./assets/images/icon-list.svg" alt="An icon list" class="list">
           <p class="list-text">And much more!</p>
         </div>
-        <label for="email" class="email" id="email">Email address <span class="error-msg disable">Valid email required</span></label>
-        <input type="email" placeholder="email@company.com" class="email-input" id="email-id" required>
+        <label for="email" class="email">Email address <span class="error-msg disable">Valid email required</span></label>
+        <input type="email" placeholder="email@company.com" class="email-input" id="email" name="email" required>
         <input type="submit" value="Subscribe to monthly newsletter" class="submit" id="submit-btn">
       </div>
     </form>

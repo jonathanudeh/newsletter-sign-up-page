@@ -1,6 +1,6 @@
 const form = document.querySelector("form");
 const successPage = document.getElementById("success-display");
-const input = document.getElementById("email-id");
+const input = document.getElementById("email");
 const errorMsg = document.querySelector(".error-msg");
 const submitBtn = document.getElementById("submit-btn");
 const dismissBtn = document.getElementById("dismiss-btn");
